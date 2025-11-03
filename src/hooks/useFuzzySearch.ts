@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import * as React from "react";
+const { useMemo } = React;
 import Fuse from "fuse.js";
 
 interface ErrorCode {
