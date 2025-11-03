@@ -16,6 +16,8 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { Input } from "./ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import ContactForm from '@/components/ContactForm';
+import { CONTACT_EMAIL } from '@/lib/config';
 
 export const Settings = () => {
   const [offlineMode, setOfflineMode] = useState(
@@ -261,8 +263,16 @@ export const Settings = () => {
                 <a href="https://jayreddin.github.io" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jamie Reddin</a>
               </p>
               <p>
-                <span className="font-medium">Version:</span> 1.5.7
+                <span className="font-medium">Version:</span> 1.5.8
               </p>
+
+              <p>
+                <span className="font-medium">Contact:</span> <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline">{CONTACT_EMAIL}</a>
+              </p>
+
+              <div className="flex gap-2">
+                <ContactForm />
+              </div>
             </div>
           </TabsContent>
         </Tabs>

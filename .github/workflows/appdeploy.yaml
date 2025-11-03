@@ -1,4 +1,4 @@
-name: App Deploy jr 22
+name: App Deploy
 
 on:
   # Runs on pushes targeting the main branch
