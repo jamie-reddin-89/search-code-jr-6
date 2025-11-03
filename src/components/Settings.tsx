@@ -130,7 +130,7 @@ export const Settings = () => {
                 </a>
               </p>
               <p>
-                <span className="font-medium">Version:</span> 1.5.2
+                <span className="font-medium">Version:</span> 1.5.3
               </p>
             </div>
           </TabsContent>
