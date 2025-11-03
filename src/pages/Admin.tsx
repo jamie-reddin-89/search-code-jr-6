@@ -61,6 +61,8 @@ export default function Admin() {
   const [errorCodes, setErrorCodes] = useState<ErrorCode[]>([]);
   const [editingCode, setEditingCode] = useState<ErrorCode | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [devices, setDevices] = useState<DeviceWithBrand[]>([]);
+  const [devicesLoading, setDevicesLoading] = useState(true);
   const { toast } = useToast();
 
   useEffect(() => {
