@@ -266,6 +266,10 @@ export const Settings = () => {
                 <span className="font-medium">Version:</span> 1.5.8
               </p>
 
+              <p>
+                <span className="font-medium">Contact:</span> <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline">{CONTACT_EMAIL}</a>
+              </p>
+
               <div className="flex gap-2">
                 <ContactForm />
               </div>
