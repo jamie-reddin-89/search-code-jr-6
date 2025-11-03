@@ -1,5 +1,41 @@
 import { supabase } from "@/integrations/supabase/client";
 
+/**
+ * Format Supabase error messages to be more user-friendly
+ */
+function formatSupabaseError(error: any, tableName: string): string {
+  const message = (error as any)?.message ?? '';
+  const code = (error as any)?.code ?? '';
+
+  if (message.includes('Could not find the table')) {
+    return `The '${tableName}' table does not exist in the database. Please ensure the database migrations have been applied.`;
+  }
+  if (message.includes('permission denied')) {
+    return `Permission denied when accessing the '${tableName}' table. Please check row-level security (RLS) policies.`;
+  }
+  if (message.includes('JWT')) {
+    return `Authentication error. Your Supabase credentials may be invalid or expired.`;
+  }
+  if (message.includes('connection')) {
+    return `Could not connect to the database. Please check your Supabase URL and internet connection.`;
+  }
+
+  return `Error accessing '${tableName}' table: ${message || code || 'Unknown error'}`;
+}
+
+/**
+ * Format general error messages
+ */
+function formatError(error: any): string {
+  if (error instanceof Error) {
+    return error.message;
+  }
+  if (typeof error === 'string') {
+    return error;
+  }
+  return JSON.stringify(error, Object.getOwnPropertyNames(error));
+}
+
 export interface Device {
   id: string;
   brand_id: string;
