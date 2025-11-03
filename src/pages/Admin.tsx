@@ -224,6 +224,10 @@ export default function Admin() {
           <ScrollText size={20} />
           App Logs
         </Link>
+        <Link to="/admin/add-device" className="nav-button flex items-center justify-center gap-2">
+          <Package size={20} />
+          Add Device
+        </Link>
         <Link to="/admin/add-error-info" className="nav-button flex items-center justify-center gap-2">
           <FilePlus2 size={20} />
           Add Error Info
