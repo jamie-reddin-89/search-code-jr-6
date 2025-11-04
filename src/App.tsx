@@ -59,6 +59,7 @@ const App = () => (
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} />
               <Route path="/admin/users" element={<AdminRoute><AdminUsers /></AdminRoute>} />
+              <Route path="/admin/messages" element={<AdminRoute><AdminMessages /></AdminRoute>} />
               <Route path="/admin/analytics" element={<AdminRoute><AdminAnalytics /></AdminRoute>} />
               <Route path="/admin/fix-steps" element={<AdminRoute><AdminFixSteps /></AdminRoute>} />
               <Route path="/admin/app-logs" element={<AdminRoute><AdminAppLogs /></AdminRoute>} />
