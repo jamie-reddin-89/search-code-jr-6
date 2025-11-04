@@ -215,15 +215,15 @@
 ### Tasks:
 
 #### 4.1 Implement App Logs System
-- [ ] Create `app_logs` table in Supabase
+- [x] Create `app_logs` table in Supabase
   - id, level (info/warn/error), message (text), stack_trace (json), timestamp, user_id, page_path
 
-- [ ] Create logger utility: `src/lib/logger.ts`
+- [x] Create logger utility: `src/lib/logger.ts`
   - Methods: log(), warn(), error()
   - Sends to Supabase + console
   - Catches errors automatically
 
-- [ ] Create AdminAppLogs page
+- [x] Create AdminAppLogs page
   - Display logs in real-time table
   - Filter by: level, date range, user, page
   - Search by message/stack trace
@@ -231,12 +231,12 @@
   - Download logs as CSV
 
 #### 4.2 Implement Analytics
-- [ ] Create `src/lib/analytics.ts`
+- [x] Create `src/lib/analytics.ts`
   - Track: page views, searches, clicks, errors
   - Send to `app_analytics` table
   - Batch events (send every 30s or on page leave)
 
-- [ ] Create AdminAnalytics page enhancements
+- [x] Create AdminAnalytics page enhancements
   - Dashboard KPIs:
     - Total page views (by page)
     - Total searches (by error code)
@@ -252,7 +252,7 @@
   - Filters: date range, user, brand, model
 
 #### 4.3 Photo Diagnosis Camera Feature
-- [ ] Create `src/components/PhotoDiagnosisModal.tsx`
+- [x] Create `src/components/PhotoDiagnosisModal.tsx`
   - Modal with camera input (HTML5 video/canvas)
   - Capture button: takes photo
   - Upload/Analyze button
